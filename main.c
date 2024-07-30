@@ -1,3 +1,5 @@
+// Built by Yash Verma; 07/30/2024
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,7 +18,7 @@
 #define MAX_CHECKSUM_LENGTH 65
 #define MAX_JOBS 1024
 
-// Define a structure for expected items
+// A structure for expected items
 struct ExpectedItem {
     char *path;
     mode_t expected_mode;
@@ -95,22 +97,22 @@ void check_existence_permissions_and_checksum(const char *path, mode_t expected_
         } else {
             fprintf(report_file, "Error accessing %s: %s\n", path, strerror(errno));
         }
-        // Format expected permissions
+
         snprintf(expected_permissions_str, sizeof(expected_permissions_str), "%o", expected_mode);
         fprintf(report_file, "Actual Permissions: N/A\n");
         fprintf(report_file, "Expected Permissions: %s\n", expected_permissions_str);
         fprintf(report_file, "Expected Checksum: %s\n", expected_checksum ? expected_checksum : "none");
     } else {
-        // Format actual permissions
+
         snprintf(actual_permissions_str, sizeof(actual_permissions_str), "%o", statbuf.st_mode & 0777);
-        // Format expected permissions
+
         snprintf(expected_permissions_str, sizeof(expected_permissions_str), "%o", expected_mode);
 
         fprintf(report_file, "Path: %s\n", path);
         fprintf(report_file, "Actual Permissions: %s\n", actual_permissions_str);
         fprintf(report_file, "Expected Permissions: %s\n", expected_permissions_str);
 
-        // Check permissions
+        // Check for permissions
         if ((statbuf.st_mode & 0777) != expected_mode) {
             fprintf(report_file, "Permission mismatch: Expected: %o, Actual: %o\n",
                     expected_mode, statbuf.st_mode & 0777);
