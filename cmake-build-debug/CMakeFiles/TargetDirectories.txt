@@ -1,0 +1,3 @@
+/Users/yshvrm/CLionProjects/FileSystemChecker/cmake-build-debug/CMakeFiles/FileSystemChecker.dir
+/Users/yshvrm/CLionProjects/FileSystemChecker/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yshvrm/CLionProjects/FileSystemChecker/cmake-build-debug/CMakeFiles/rebuild_cache.dir

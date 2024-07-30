@@ -1,0 +1,8 @@
+Path: /Users/yshvrm/Downloads/IMG_5829.HEIC
+Actual Permissions: 644
+Expected Permissions: 644
+Permissions are correct
+Actual Checksum: 207177d9ba8e92c1dc2852e04faa0136
+Expected Checksum: d3d3de3d3ede
+Checksum mismatch
+File and directory check completed.
